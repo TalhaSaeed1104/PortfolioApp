@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import "./Contact.css";
 import Contact_Us from "../../assets/img/contact-img.png";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
-import LightSpeed from "react-reveal/LightSpeed";
 
 // import EmailJs
 import emailjs from "@emailjs/browser";
@@ -49,79 +47,65 @@ const Contact = () => {
             <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
               <div className="card1">
                 <div className="row border-line">
-                  <LightSpeed left>
-                    <img src={Contact_Us} alt="contact" className="image" />
-                  </LightSpeed>
+                  <img src={Contact_Us} alt="contact" className="image" />
                 </div>
               </div>
             </div>
             <div className="card-control col-lg-6 col-md-6">
               <div className="card2 d-flex border-0 px-4 py-4">
                 <div className="row">
-                  <Fade left>
-                    <div className="row">
-                      <h6 className="icons">
-                        Contact with
-                        <BsLinkedin color="blue" size={25} className="ms-2" />
-                        <BsGithub color="black" size={25} className="ms-2" />
-                        <BsFacebook color="blue" size={25} className="ms-2" />
-                      </h6>
-                    </div>
-                  </Fade>
-                  <Fade right>
-                    <div className="row px-3 mb-4">
-                      <div className="line" />
-                      <small className="or text-center">OR</small>
-                      <div className="line" />
-                    </div>
-                  </Fade>
+                  <div className="row">
+                    <h6 className="icons">
+                      Contact with
+                      <BsLinkedin color="blue" size={25} className="ms-2" />
+                      <BsGithub color="black" size={25} className="ms-2" />
+                      <BsFacebook color="blue" size={25} className="ms-2" />
+                    </h6>
+                  </div>
+                  <div className="row px-3 mb-4">
+                    <div className="line" />
+                    <small className="or text-center">OR</small>
+                    <div className="line" />
+                  </div>
                   <form ref={form} onSubmit={sendEmail}>
-                    <Fade left>
-                      <div className="row px-3">
-                        <input
-                          type="text"
-                          name="from_name"
-                          className="mb-3"
-                          ref={name}
-                          placeholder="Enter Your Name......"
-                          autoComplete="off"
-                          required
-                        />
-                      </div>
-                    </Fade>
-                    <Fade right>
-                      <div className="row px-3">
-                        <input
-                          type="email"
-                          name="from_email"
-                          className="mb-3"
-                          ref={email}
-                          placeholder="Enter Your Email......"
-                          autoComplete="off"
-                          required
-                        />
-                      </div>
-                    </Fade>
-                    <Fade left>
-                      <div className="row px-3">
-                        <textarea
-                          type="text"
-                          name="message"
-                          className="mb-3"
-                          ref={message}
-                          placeholder="Enter Your Message......"
-                          autoComplete="off"
-                          required
-                        />
-                      </div>
-                    </Fade>
-                    <Fade right>
-                      <div className="row px-3">
-                        <button className="button" type="submit">
-                          Send Message
-                        </button>
-                      </div>
-                    </Fade>
+                    <div className="row px-3">
+                      <input
+                        type="text"
+                        name="from_name"
+                        className="mb-3"
+                        ref={name}
+                        placeholder="Enter Your Name......"
+                        autoComplete="off"
+                        required
+                      />
+                    </div>
+                    <div className="row px-3">
+                      <input
+                        type="email"
+                        name="from_email"
+                        className="mb-3"
+                        ref={email}
+                        placeholder="Enter Your Email......"
+                        autoComplete="off"
+                        required
+                      />
+                    </div>
+                    <div className="row px-3">
+                      <textarea
+                        type="text"
+                        name="message"
+                        className="mb-3"
+                        ref={message}
+                        placeholder="Enter Your Message......"
+                        autoComplete="off"
+                        required
+                      />
+                    </div>
+                    <div className="row px-3">
+                      <button className="button" type="submit">
+                        Send Message
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>
